@@ -58,3 +58,11 @@ public struct Layout_VorlageSwiftUIView: View {
         .padding()
     }
 }
+// MARK: Die nachfolgende Komponennte ist eine Vorlage, es behinhaltet die GroupBox, die Navigationspfeile auf beiden Seiten und das Image selbst. Natürlich muss man den Namen des Fotos wie auch ein Beschreibungstext dazu schreiben, damit am Ende auch was angezeit wird. Hier ein Beispiel, was im body stehen muss:
+/**
+ Layout_VorlageSwiftUIView(instructions: [
+     ("IBAN", "Test versuch"),
+     ("Startseite", "Moin wie gehts euch"),
+     ("Ubersicht", "Es funktioniert")
+ ])
+ */

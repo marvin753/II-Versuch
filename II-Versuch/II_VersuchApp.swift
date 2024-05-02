@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct II_VersuchApp: App {
+    @StateObject private var authViewModel = AuthViewModel()
+
+    init() {
+        FirebaseApp.configure()
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authViewModel.isUserLoggedIn {
+                ContentView()
+                    .environmentObject(authViewModel)
+            } else {
+                LoginViewSwiftUIView()
+                    .environmentObject(authViewModel)
+            }
         }
     }
 }

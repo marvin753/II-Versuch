@@ -7,57 +7,45 @@
 
 import SwiftUI
 
-struct JA_NeinSwiftUIView: View {
-        
-      private let anleitung: [(imageName: String, text: String)] = [
-            ("StartseiteU", "Klicke auf den rot eingekreisten Kreis." ),
-            ("Suchleiste", "Gebe hier nun den Namen der Person ein, der du Geld Überweisen willt. ACHTUNG: Du kannst in der Suchleiste nur Personen finden, den du in der Verganenheit schon Mal Geld überwiesen hast."),
-        ]
-        
-        @State private var start = 0
-        
-        var body: some View {
-           VStack {
-                    Image(anleitung[start].imageName)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    
-                    
-                    HStack{
-                        Button(action: {
-                            if self.start > 0 {
-                                self.start -= 1
-                            }
-                        }){
-                            Image(systemName: "chevron.left")
-                                .font(.largeTitle)
-                                .padding(.horizontal)
-                            
-                        }
-                        .disabled(start == 0)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            if self.start < self.anleitung.count - 1{
-                                self.start += 1
-                            }
-                        }) {
-                            Image(systemName: "chevron.right")
-                                .font(.largeTitle)
-                                .padding(.horizontal)
-                        }
-                        .disabled(start == self.anleitung.count - 1 )
-                    }
-                }
-                GroupBox("Beschreibung:"){
-                    Text(anleitung[start].text)
-                        .padding()
-                }
-                .padding()
-            }
-        }
+struct GrowingButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(.blue)
+            .foregroundStyle(.white)
+            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+    }
+}
 
+struct JA_NeinSwiftUIView: View {
+    var body: some View {
+        VStack(){
+            Button(action: {}) {
+                NavigationLink(destination: Uberweisen_Neue_PersonSwiftUIView()) {
+                    Text("Überweinung, an eine neue Person")
+                }
+            }
+            .buttonStyle(GrowingButton())
+            .padding()
+            Button(action: {}) {
+                NavigationLink(destination: UberweisungSwiftUIView()) {
+                    Text("Überwesung an eine Person, der ich in der Vergangenheit schon Mal Geld überwiesen habe.")
+                }
+            }
+            .buttonStyle(GrowingButton())
+            
+        }
+        .position(x: 195, y: 300)
+        Spacer()
+            GroupBox("Beschreibung:"){
+                Text("Klicke auf den Text, der das erfüllt, wonach du suchst.")
+                    .padding()
+        }
+        .padding()
+    }
+}
 
 #Preview {
     JA_NeinSwiftUIView()

@@ -10,13 +10,9 @@ import SwiftUI
 struct N26SwiftUIView: View {
     var body: some View {
         ZStack(){
-            Image("N26Icon")
-                .resizable()
-                .frame(width: 78.0, height: 78.0)
-                .listRowInsets(EdgeInsets())
-                .position(x: 196, y: 50)
-                .padding(.bottom)
-                .zIndex(1.0)
+
+            InnAppImageSwiftUIView(imageName: "N26Icon")
+            
             VStack{
                 Spacer()
                     .frame(height: 100)
@@ -32,9 +28,10 @@ struct N26SwiftUIView: View {
             .navigationTitle("N26")
         }
     }
-    
 }
 #Preview {
     N26SwiftUIView()
 }
+
+
 

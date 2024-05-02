@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TestSwiftUIView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Layout_VorlageSwiftUIView(instructions: [
+            ("IBAN", "Test verhjhhdihviwhrv ihrihiwhifhwrihfih fhrwifhihf hfihfihifhiwhfhwilfhiwhfi h fhiwhfihwf ihfhwhfihfihf hfhhwfi hf h hefihwifiwh whfhwifhiwhfisuch"),
+            ("Startseite", "Moin wie gehts euch"),
+            ("Ubersicht", "Es funktioniert")
+        ])
     }
 }
 
