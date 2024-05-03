@@ -18,13 +18,23 @@ struct II_VersuchApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if authViewModel.isUserLoggedIn {
+            switchViewState().environmentObject(authViewModel)
+        }
+    }
+    
+    @ViewBuilder
+    private func switchViewState() -> some View {
+        if authViewModel.isUserLoggedIn {
+            switch authViewModel.currentUser?.role {
+            case .admin:
+                AdminView()
+            case .mother, .standard:
                 ContentView()
-                    .environmentObject(authViewModel)
-            } else {
+            default:
                 LoginViewSwiftUIView()
-                    .environmentObject(authViewModel)
             }
+        } else {
+            LoginViewSwiftUIView()
         }
     }
 }

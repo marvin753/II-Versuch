@@ -1,8 +1,8 @@
 //
-//  ProfileView.swift
+//  ProfilView.swift
 //  II-Versuch
 //
-//  Created by Marvin Barsal on 28.04.24.
+//  Created by Marvin Barsal on 03.05.24.
 //
 
 import SwiftUI
@@ -15,21 +15,18 @@ struct ProfileView: View {
             List {
                 Section {
                     HStack {
-                        Text(User.MOCK_USER.initials)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .frame(width: 72, height: 72)
-                            .background(Color(.systemGray3))
-                            .clipShape(Circle())
-                        
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Ute Barsal")
-                                .fontWeight(.semibold)
-                                .padding(.top, 4)
-                            //Text(User.MOCK_USER.email) // Bildet die Email unter dem Benutzernamen wieder.
-                                 //.font(.footnote)
-                                 //.foregroundColor(.gray)
+                        Text(authViewModel.currentUser?.initials ?? "")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 72, height: 72)
+                        .background(Color(.systemGray3))
+                        .clipShape(Circle())
+                                           
+                     VStack(alignment: .leading, spacing: 4) {
+                        Text(authViewModel.currentUser?.fullName ?? "N/A")
+                             .fontWeight(.semibold)
+                             .padding(.top, 4)
                                 
                         }
                     }
@@ -69,7 +66,8 @@ struct ProfileView: View {
     }
 }
 
-
-#Preview {
-    ProfileView()
+struct ProfileView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileView().environmentObject(AuthViewModel())
+    }
 }

@@ -1,38 +1,47 @@
+//
+//  LoginView.swift
+//  II-Versuch
+//
+//  Created by Marvin Barsal on 03.05.24.
+//
+
 import SwiftUI
 
-struct LoginViewSwiftUIView: View {
-    @State private var email = ""
-    @State private var passwort = ""
-    @EnvironmentObject var authViewModel: AuthViewModel
 
-    let correctEmail = "T"
-    let correctPasswort = "2"
+struct LoginViewSwiftUIView: View {
+    @State private var username = ""
+    @State private var password = ""
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
         NavigationStack {
             VStack {
-                Image("N26Icon")
+                Image("AppIconImage")
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 100, height: 120)
-                    .padding(.vertical, 32)
+                    .frame(width: 140, height: 140)
+                    .padding(.top, 15)
+                    .padding(.bottom, 20)
                 
                 VStack(spacing: 24) {
-                    InputView(text: $email,
-                              title: "Email Adresse",
-                              placeholder: "name@beispiel.com")
+                    InputView(text: $username,
+                              title: "Benutzernamen",
+                              placeholder: "Vornamen Nachnamen")
                     
-                    InputView(text: $passwort,
+                    InputView(text: $password,
                               title: "Passwort",
                               placeholder: "Gebe dein Passwort ein",
                               isSecureField: true)
                 }
-                //.padding(.horizontal)
                 .padding(.top, 12)
                 
-                Button {
-                    handleLogin()
-                } label: {
+                if let errorMessage = authViewModel.loginErrorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+                
+                Button(action: handleLogin) {
                     HStack {
                         Text("Anmelden")
                             .fontWeight(.semibold)
@@ -40,14 +49,14 @@ struct LoginViewSwiftUIView: View {
                     }
                     .foregroundColor(.white)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                    .background(Color(hex: "034C4A"))
+                    .cornerRadius(10)
+                    .padding(.top, 24)
                 }
-                .background(Color(.systemBlue))
-                .cornerRadius(10)
-                .padding(.top, 24)
                 
                 Spacer()
             }
-            .navigationDestination(isPresented: $authViewModel.isUserLoggedIn) { // Corrected
+            .navigationDestination(isPresented: $authViewModel.isUserLoggedIn) {
                 ContentView()
                     .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)
@@ -56,13 +65,10 @@ struct LoginViewSwiftUIView: View {
     }
 
     func handleLogin() {
-        if email == correctEmail && passwort == correctPasswort {
-            authViewModel.isUserLoggedIn = true  // Corrected access
-        }
+        authViewModel.authenticate(username: username, password: password)
     }
 }
 
- 
 #Preview {
     LoginViewSwiftUIView()
         .environmentObject(AuthViewModel())
