@@ -35,10 +35,11 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView().environmentObject(AuthViewModel())
+    }
 }
-
 
 
 //MARK: TODO:                                                                                   Limitierung, dass man nicht ganz so weit nach oben scrollen kann & die Apps etwas weiter nach unten packen, da noch oben rechts ein Kreis kommt etc. 

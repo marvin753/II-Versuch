@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "1901_N26_App_Icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "AmazonAppIcon.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
