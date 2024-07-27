@@ -10,6 +10,7 @@ import Firebase
 @main
 struct II_VersuchApp: App {
     @StateObject private var authViewModel = AuthViewModel()
+    @State private var showSplashScreen = true
 
     // Verwende UIApplicationDelegateAdaptor, um den AppDelegate zu integrieren
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
@@ -23,7 +24,16 @@ struct II_VersuchApp: App {
 
     var body: some Scene {
         WindowGroup {
-            switchViewState().environmentObject(authViewModel)
+            if showSplashScreen {
+                SplashScreenView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            self.showSplashScreen = false
+                        }
+                    }
+            } else {
+                switchViewState().environmentObject(authViewModel)
+            }
         }
     }
 

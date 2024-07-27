@@ -23,7 +23,7 @@ struct HomeMenu_: View {
         AppIcon(imageName: "N26Icon", appName: "N26", destination: AnyView(N26SwiftUIView())),
         AppIcon(imageName: "AppleMusikIcon", appName: "Musik", destination: AnyView(AppleMusikView())),
         AppIcon(imageName: "AmazonAppIcon", appName: "Amazon", destination: AnyView(AmazonView())),
-        
+        AppIcon(imageName: "EinstellungsIcon", appName: "Einstellungen", destination: AnyView(Ubersicht())),
     ]
     
     var filteredAppIcons: [AppIcon] {
@@ -69,7 +69,7 @@ struct HomeMenu_: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 18))
                                     .lineLimit(1)
-                                    .minimumScaleFactor(0.8)
+                                    .minimumScaleFactor(0.5)
                                     .scaledToFit()
                                     .dynamicTypeSize(.medium ... .xxLarge)
                                 }
