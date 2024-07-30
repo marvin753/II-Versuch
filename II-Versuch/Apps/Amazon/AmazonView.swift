@@ -20,7 +20,10 @@ struct AmazonView: View {
         
         //Hier werde ich genauso wie in N26SwiftUIView das App Icon mit den ganuen Anleitungen anzeigen in eine Liste & Section
     }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 }
 
 

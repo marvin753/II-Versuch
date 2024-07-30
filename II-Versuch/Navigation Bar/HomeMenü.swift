@@ -23,7 +23,10 @@ struct HomeMenu_: View {
         AppIcon(imageName: "N26Icon", appName: "N26", destination: AnyView(N26SwiftUIView())),
         AppIcon(imageName: "AppleMusikIcon", appName: "Musik", destination: AnyView(AppleMusikView())),
         AppIcon(imageName: "AmazonAppIcon", appName: "Amazon", destination: AnyView(AmazonView())),
+<<<<<<< HEAD
         AppIcon(imageName: "EinstellungsIcon", appName: "Einstellungen", destination: AnyView(Ubersicht())),
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
     ]
     
     var filteredAppIcons: [AppIcon] {
@@ -46,6 +49,7 @@ struct HomeMenu_: View {
                         .font(.custom("Helvetica-Bold", size: 16)) // 16 ist die Schriftgröße
                 }
                 
+<<<<<<< HEAD
                 ScrollView {
                     let spacing: CGFloat = 10
                     let sidePadding: CGFloat = UIScreen.main.bounds.width < 375 ? 20 : 16
@@ -80,11 +84,38 @@ struct HomeMenu_: View {
                     .padding(.horizontal, sidePadding)
                 }
             }
+=======
+                ScrollView{
+                    //Hiermit kann man den Abstand und die Anzahl der App Icons festlegen
+                    LazyVGrid(columns: Array(repeating: GridItem(), count: 4),      spacing: 28){
+                        ForEach(filteredAppIcons) { appIcon in
+                            NavigationLink(destination: appIcon.destination){
+                                VStack {
+                                    Image(appIcon.imageName)
+                                        .resizable()
+                                        .frame(width: 78.0, height: 78.0)
+                                        .listRowInsets(EdgeInsets())// Das macht den weißen Rand weg
+                                    Text(appIcon.appName)
+                                        .foregroundColor(.black)
+                                        //.padding(.top, 4)
+                                }
+                            }
+                        }
+                    }
+                    .padding()
+                }
+            }
+            //.navigationTitle("Apps")
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
         }
     }
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 #Preview {
     HomeMenu_()
 }
@@ -93,3 +124,8 @@ struct HomeMenu_: View {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd

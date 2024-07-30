@@ -10,13 +10,17 @@ import SwiftUI
 struct ProfileView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
     var body: some View {
         VStack {
             List {
                 Section {
                     HStack {
                         Text(authViewModel.currentUser?.initials ?? "")
+<<<<<<< HEAD
                             .font(.title)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
@@ -29,6 +33,20 @@ struct ProfileView: View {
                                 .fontWeight(.semibold)
                                 .padding(.top, 4)
                             
+=======
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 72, height: 72)
+                        .background(Color(.systemGray3))
+                        .clipShape(Circle())
+                                           
+                     VStack(alignment: .leading, spacing: 4) {
+                        Text(authViewModel.currentUser?.fullName ?? "N/A")
+                             .fontWeight(.semibold)
+                             .padding(.top, 4)
+                                
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
                         }
                     }
                 }
@@ -57,6 +75,7 @@ struct ProfileView: View {
                                        tintColor: .red)
                     }
                 }
+<<<<<<< HEAD
                 if UIScreen.main.bounds.width < 375 {
                     Text("Entwickelt mit ❤️ für meine Mutter")
                         .font(.subheadline) // Anpassung der Schriftgröße für kleinere iPhones
@@ -72,6 +91,14 @@ struct ProfileView: View {
                 }
                 
             }
+=======
+                Text("Entwickelt mit ❤️ für meine Mutter ")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                    .listRowBackground(Color.clear)
+                    
+            }
+           
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
         }
     }
 }

@@ -26,6 +26,9 @@ extension Color {
         self.init(.sRGB, red: Double(r) / 255, green: Double(g) / 255, blue: Double(b) / 255, opacity: Double(a) / 255)
     }
 }
+<<<<<<< HEAD
 
 
 //Mein Farbcode von meiner App ist 034C4A
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd

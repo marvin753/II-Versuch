@@ -30,12 +30,15 @@
 		CE166E132BE63CCA00E98B4C /* Bestellen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE166E122BE63CCA00E98B4C /* Bestellen.swift */; };
 		CE166E152BE63D3700E98B4C /* AmazonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE166E142BE63D3700E98B4C /* AmazonView.swift */; };
 		CE166E172BE64C4800E98B4C /* GenericSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE166E162BE64C4800E98B4C /* GenericSwiftUIView.swift */; };
+<<<<<<< HEAD
 		CE2D7BDB2C55443800A4E6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D7BDA2C55443800A4E6D4 /* AppDelegate.swift */; };
 		CE730B9C2C567F9D00BC20AE /* KeyboardDismissModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE730B9B2C567F9D00BC20AE /* KeyboardDismissModifier.swift */; };
 		CE730B9F2C570A5B00BC20AE /* Passwortfinden.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE730B9E2C570A5B00BC20AE /* Passwortfinden.swift */; };
 		CE730BA12C570A9D00BC20AE /* Ubersicht.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE730BA02C570A9D00BC20AE /* Ubersicht.swift */; };
 		CE730BA32C57122900BC20AE /* Disyplay_ausschlaten.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE730BA22C57122900BC20AE /* Disyplay_ausschlaten.swift */; };
 		CE730BA92C57C80F00BC20AE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE730BA82C57C80F00BC20AE /* SplashScreenView.swift */; };
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 		CE8C93342BB1CE1C008F9FB8 /* II_VersuchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C93332BB1CE1C008F9FB8 /* II_VersuchApp.swift */; };
 		CE8C93362BB1CE1C008F9FB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C93352BB1CE1C008F9FB8 /* ContentView.swift */; };
 		CE8C93382BB1CE1E008F9FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8C93372BB1CE1E008F9FB8 /* Assets.xcassets */; };
@@ -71,12 +74,15 @@
 		CE166E122BE63CCA00E98B4C /* Bestellen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bestellen.swift; sourceTree = "<group>"; };
 		CE166E142BE63D3700E98B4C /* AmazonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazonView.swift; sourceTree = "<group>"; };
 		CE166E162BE64C4800E98B4C /* GenericSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSwiftUIView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		CE2D7BDA2C55443800A4E6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE730B9B2C567F9D00BC20AE /* KeyboardDismissModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismissModifier.swift; sourceTree = "<group>"; };
 		CE730B9E2C570A5B00BC20AE /* Passwortfinden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwortfinden.swift; sourceTree = "<group>"; };
 		CE730BA02C570A9D00BC20AE /* Ubersicht.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ubersicht.swift; sourceTree = "<group>"; };
 		CE730BA22C57122900BC20AE /* Disyplay_ausschlaten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disyplay_ausschlaten.swift; sourceTree = "<group>"; };
 		CE730BA82C57C80F00BC20AE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 		CE8C93302BB1CE1C008F9FB8 /* LeichtGemacht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeichtGemacht.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8C93332BB1CE1C008F9FB8 /* II_VersuchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = II_VersuchApp.swift; sourceTree = "<group>"; };
 		CE8C93352BB1CE1C008F9FB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,7 +145,10 @@
 			children = (
 				CE0AE0FB2BE5609000C9D3FB /* LoginViewSwiftUIView.swift */,
 				CE0AE3402BE5633100C5CB91 /* AuthViewModel.swift */,
+<<<<<<< HEAD
 				CE730BA82C57C80F00BC20AE /* SplashScreenView.swift */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 			);
 			path = Login.;
 			sourceTree = "<group>";
@@ -157,7 +166,10 @@
 		CE166E032BE6283100E98B4C /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				CE730B9D2C570A0C00BC20AE /* Allgemein */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 				CE166E102BE63C9F00E98B4C /* Amazon */,
 				CE166E082BE63B3600E98B4C /* Apple Musik */,
 				CE166DFE2BE6242900E98B4C /* N26 */,
@@ -200,6 +212,7 @@
 			path = Anleitungen;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		CE730B9D2C570A0C00BC20AE /* Allgemein */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +231,8 @@
 			path = Einstellungen;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 		CE8C93272BB1CE1C008F9FB8 = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +277,10 @@
 		CED8CE0F2BC9722700CE2E60 /* Vorlagen */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				CE2D7BDA2C55443800A4E6D4 /* AppDelegate.swift */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 				CE166E012BE626B500E98B4C /* Suchleiste.swift */,
 				CE0AE3442BE5696400C5CB91 /* Color.swift */,
 				CE0AE0FF2BE5621600C9D3FB /* User.swift */,
@@ -272,7 +290,10 @@
 				CEBDDF582BD50F760086A714 /* InnAppImageSwiftUIView.swift */,
 				CED8CE0B2BC949C500CE2E60 /* Layout.VorlageSwiftUIView.swift */,
 				CE166E162BE64C4800E98B4C /* GenericSwiftUIView.swift */,
+<<<<<<< HEAD
 				CE730B9B2C567F9D00BC20AE /* KeyboardDismissModifier.swift */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 			);
 			path = Vorlagen;
 			sourceTree = "<group>";
@@ -356,13 +377,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8C93362BB1CE1C008F9FB8 /* ContentView.swift in Sources */,
+<<<<<<< HEAD
 				CE730B9C2C567F9D00BC20AE /* KeyboardDismissModifier.swift in Sources */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 				CE0AE0FE2BE561E900C9D3FB /* SettingRowView.swift in Sources */,
 				CE166E0D2BE63BA900E98B4C /* AddMusik.swift in Sources */,
 				CE8C93762BB59D0A008F9FB8 /* HomeMenü.swift in Sources */,
 				CE8C93752BB5984E008F9FB8 /* AddSwiftUIView.swift in Sources */,
+<<<<<<< HEAD
 				CE730B9F2C570A5B00BC20AE /* Passwortfinden.swift in Sources */,
 				CE730BA92C57C80F00BC20AE /* SplashScreenView.swift in Sources */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 				CE0AE0F32BE3C40F00C9D3FB /* AdminDetailView.swift in Sources */,
 				CE0AE1042BE5628500C9D3FB /* ProfileView.swift in Sources */,
 				CEBDDF592BD50F760086A714 /* InnAppImageSwiftUIView.swift in Sources */,
@@ -370,14 +397,20 @@
 				CE056EC82BB879CA004EC5EF /* IBANSwiftUIView.swift in Sources */,
 				CE0AE3412BE5633100C5CB91 /* AuthViewModel.swift in Sources */,
 				CE0AE0F72BE538F900C9D3FB /* AdminView.swift in Sources */,
+<<<<<<< HEAD
 				CE730BA32C57122900BC20AE /* Disyplay_ausschlaten.swift in Sources */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 				CED8CE0C2BC949C500CE2E60 /* Layout.VorlageSwiftUIView.swift in Sources */,
 				CE8C937A2BB5C609008F9FB8 /* N26SwiftUIView.swift in Sources */,
 				CE166E172BE64C4800E98B4C /* GenericSwiftUIView.swift in Sources */,
 				CE0AE0E52BE3B71000C9D3FB /* Nachricht.swift in Sources */,
 				CE166E052BE62ECB00E98B4C /* Neue_Person_Uberweisung.swift in Sources */,
 				CE166E152BE63D3700E98B4C /* AmazonView.swift in Sources */,
+<<<<<<< HEAD
 				CE2D7BDB2C55443800A4E6D4 /* AppDelegate.swift in Sources */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 				CE166E132BE63CCA00E98B4C /* Bestellen.swift in Sources */,
 				CE166E072BE6398B00E98B4C /* LoginViaPasswort.swift in Sources */,
 				CE0AE1002BE5621600C9D3FB /* User.swift in Sources */,
@@ -387,7 +420,10 @@
 				CE0AE3432BE5638E00C5CB91 /* InputView.swift in Sources */,
 				CE0AE0FC2BE5609100C9D3FB /* LoginViewSwiftUIView.swift in Sources */,
 				CE166E0B2BE63B8000E98B4C /* SearchForMusic.swift in Sources */,
+<<<<<<< HEAD
 				CE730BA12C570A9D00BC20AE /* Ubersicht.swift in Sources */,
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 				CE0AE0F12BE3C3D600C9D3FB /* AdminListView.swift in Sources */,
 				CE166E022BE626B500E98B4C /* Suchleiste.swift in Sources */,
 			);

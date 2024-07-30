@@ -26,6 +26,10 @@ public struct GenericSwiftUIView: View {
                                 NavigationLink(destination: item.destination) {
                                     Text(item.title)
                                 }
+<<<<<<< HEAD
+=======
+                                // zIndex wurde entfernt
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
                             }
                         }
                     }
@@ -33,7 +37,10 @@ public struct GenericSwiftUIView: View {
                 .navigationTitle(navigationTitle)
             }
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
     }
 }
 

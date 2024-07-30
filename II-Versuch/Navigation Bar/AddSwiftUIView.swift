@@ -15,7 +15,11 @@ struct AddSwiftUIView: View {
     @State private var showingSuccessAlert = false
     @State private var showingErrorAlert = false
     @State private var errorMessage = ""
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
     var body: some View {
         Form {
             Section(header: Text("Um welche App geht es?")) {
@@ -52,10 +56,17 @@ struct AddSwiftUIView: View {
             .frame(maxWidth: .infinity)
         }
     }
+<<<<<<< HEAD
 
     func validateFields() -> Bool {
         var errors: [String] = []
 
+=======
+    
+    func validateFields() -> Bool {
+        var errors: [String] = []
+        
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
         if app.isEmpty {
             errors.append("den App-Namen")
         }
@@ -65,7 +76,11 @@ struct AddSwiftUIView: View {
         if ziel.isEmpty {
             errors.append("dein Ziel")
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
         if !errors.isEmpty {
             errorMessage = "Bitte gib \(errors.joined(separator: ", ")) ein."
             if errors.count > 1 {
@@ -73,6 +88,7 @@ struct AddSwiftUIView: View {
             }
             return false
         }
+<<<<<<< HEAD
 
         return true
     }
@@ -84,17 +100,31 @@ struct AddSwiftUIView: View {
             return
         }
 
+=======
+        
+        return true
+    }
+    
+    func sendMessage(app: String, problem: String, ziel: String) {
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
         let db = Firestore.firestore()
         db.collection("userMessages").addDocument(data: [
             "app": app,
             "problem": problem,
             "ziel": ziel,
             "timestamp": Timestamp(date: Date()),
+<<<<<<< HEAD
             "userID": userID
         ]) { error in
             if let error = error {
                 self.errorMessage = "Error adding document: \(error.localizedDescription)"
                 self.showingErrorAlert = true
+=======
+            "userID": Auth.auth().currentUser?.uid ?? "unknown"
+        ]) { error in
+            if let error = error {
+                print("Error adding document: \(error.localizedDescription)")
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
             } else {
                 self.showingSuccessAlert = true
             }
@@ -102,6 +132,15 @@ struct AddSwiftUIView: View {
     }
 }
 
+<<<<<<< HEAD
 #Preview {
     AddSwiftUIView()
 }
+=======
+        
+#Preview {
+    AddSwiftUIView()
+}
+        
+    
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd

@@ -7,6 +7,11 @@
 
 import Foundation
 
+<<<<<<< HEAD
+=======
+import Foundation
+
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 public struct User: Identifiable, Codable {
     public var id: String
     public var fullName: String

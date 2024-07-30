@@ -12,12 +12,16 @@ public struct Layout_VorlageSwiftUIView: View {
     private let instructions: [(imageName: String, text: String)]
     
     @State private var currentIndex = 0
+<<<<<<< HEAD
     @State private var isImageFullScreen = false
+=======
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
     
     init(instructions: [(imageName: String, text: String)]) {
         self.instructions = instructions
     }
     
+<<<<<<< HEAD
     public var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -110,6 +114,49 @@ struct Layout_VorlageSwiftUIView_Previews: PreviewProvider {
     }
 }
 
+=======
+   public var body: some View {
+        VStack {
+            Image(instructions[currentIndex].imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+            HStack {
+                Button(action: {
+                    if self.currentIndex > 0 {
+                        self.currentIndex -= 1
+                    }
+                }) {
+                    Image(systemName: "chevron.left")
+                        .font(.largeTitle)
+                        .padding(.horizontal)
+                }
+                .disabled(currentIndex == 0)
+                
+                Spacer()
+                
+                Button(action: {
+                    if self.currentIndex < self.instructions.count - 1 {
+                        self.currentIndex += 1
+                    }
+                }) {
+                    Image(systemName: "chevron.right")
+                        .font(.largeTitle)
+                        .padding(.horizontal)
+                }
+                .disabled(currentIndex == self.instructions.count - 1)
+            }
+        }
+        .padding()
+        
+        GroupBox("Beschreibung:") {
+            Text(instructions[currentIndex].text)
+                .padding()
+        }
+        .padding()
+    }
+}
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 // MARK: Die nachfolgende Komponennte ist eine Vorlage, es behinhaltet die GroupBox, die Navigationspfeile auf beiden Seiten und das Image selbst. Natürlich muss man den Namen des Fotos wie auch ein Beschreibungstext dazu schreiben, damit am Ende auch was angezeit wird. Hier ein Beispiel, was im body stehen muss:
 /**
  Layout_VorlageSwiftUIView(instructions: [

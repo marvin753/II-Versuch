@@ -4,12 +4,17 @@
 //
 //  Created by Marvin Barsal on 25.03.24.
 //
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
 import SwiftUI
 import Firebase
 
 @main
 struct II_VersuchApp: App {
     @StateObject private var authViewModel = AuthViewModel()
+<<<<<<< HEAD
     @State private var showSplashScreen = true
 
     // Verwende UIApplicationDelegateAdaptor, um den AppDelegate zu integrieren
@@ -20,10 +25,16 @@ struct II_VersuchApp: App {
             FirebaseApp.configure()
             print("Firebase configured in init")
         }
+=======
+
+    init() {
+        FirebaseApp.configure()
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
     }
 
     var body: some Scene {
         WindowGroup {
+<<<<<<< HEAD
             if showSplashScreen {
                 SplashScreenView()
                     .onAppear {
@@ -37,6 +48,12 @@ struct II_VersuchApp: App {
         }
     }
 
+=======
+            switchViewState().environmentObject(authViewModel)
+        }
+    }
+    
+>>>>>>> 2d239ae789422a1efc5fae9c65accdceac1119cd
     @ViewBuilder
     private func switchViewState() -> some View {
         if authViewModel.isUserLoggedIn {
